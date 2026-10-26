@@ -53,7 +53,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
   gap: 0.75rem;
 }
 
@@ -81,6 +81,44 @@
   border-radius: 9999px;
   background: #f1f5f9;
   color: #475569;
+}
+
+.card-top-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.favorite-icon-btn {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+}
+
+.favorite-icon-btn:hover {
+  background: #fff1f2;
+  border-color: #fda4af;
+  color: #e11d48;
+  transform: scale(1.08);
+}
+
+.favorite-icon-btn.active {
+  background: #ffe4e6;
+  border-color: #f43f5e;
+  color: #e11d48;
+}
+
+.heart-active {
+  fill: #e11d48;
+  color: #e11d48;
 }
 
 .rating-badge {
@@ -112,8 +150,19 @@
   font-weight: 700;
   line-height: 1.35;
   color: #0f172a;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
   min-height: 3.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.course-short-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -199,10 +248,35 @@
 .card-footer {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.55rem;
   margin-top: 0.5rem;
   padding-top: 0.85rem;
   border-top: 1px solid #e2e8f0;
+}
+
+/* Кнопка Детальніше (Лабораторна 1) */
+.btn-details-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-details-action:hover {
+  background: #e2e8f0;
+  color: #4f46e5;
+  border-color: #818cf8;
 }
 
 .action-btn {
@@ -211,7 +285,7 @@
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
-  padding: 0.8rem 1rem;
+  padding: 0.75rem 1rem;
   border: none;
   border-radius: 12px;
   font-size: 0.92rem;
